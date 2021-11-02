@@ -1,5 +1,5 @@
 import React from "react";
-import ContactCard from "./ContactCard"
+import ContactCard from "./ContactCard";
 
 const ContactList =(props) =>{
     const deleteContactHandler = (id)=>{
@@ -11,9 +11,12 @@ const ContactList =(props) =>{
         )
     });
     return(
-        <div className="ui celled list">
+        <div style = {{ margin: 80}}>
+            <h2 className="header" >Contact List </h2>
+        <div  className= 'ui celled list' >
            {renderContactList}
-           </div> 
+        </div> 
+        </div>
     );
 }
 

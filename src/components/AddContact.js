@@ -1,4 +1,7 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
+
+import ContactList from './ContactList';
 
 class AddContact extends React.Component{
     state ={
@@ -20,9 +23,10 @@ class AddContact extends React.Component{
 
     render() {
         return (
-            <div className="ui main">
+            <div className="ui main" style={{ margin: 50}}>
                 <h2>Add Contact</h2>
-                <form className = "ui form" onSubmit ={this.onAddClick} >
+                <Button variant="contained" style={{float: 'right'}}>Contact List</Button>
+                <form className = "ui form">
                    <div className = "field"> 
                         <label>Name</label>
                         <input 
@@ -38,7 +42,8 @@ class AddContact extends React.Component{
                          value = {this.state.email} 
                          onChange = {(e) => this.setState({email: e.target.value})} />
                     </div>
-                    <button className="ui button blue">Add Contact</button> 
+                   
+                    <Button variant="contained"  color="primary" onClick ={this.onAddClick}>Add Contact</Button> 
                 </form>
             </div>    
         );
