@@ -2,6 +2,7 @@ import React from "react";
 import Button from '@material-ui/core/Button';
 
 import ContactList from './ContactList';
+import { Link } from "react-router-dom";
 
 class AddContact extends React.Component{
     state ={
@@ -21,12 +22,18 @@ class AddContact extends React.Component{
 
     }
 
+    onClickContactList = ()=>{
+        this.props.history.push("/contact-list");
+       // <Link to="/contact-list"></Link>
+
+    }
+
     render() {
         return (
             <div className="ui main" style={{ margin: 50}}>
-                <h2>Add Contact</h2>
-                <Button variant="contained" style={{float: 'right'}}>Contact List</Button>
-                <form className = "ui form">
+                <h2 style={{display:"inline"}}>Add Contact</h2>
+                <Button variant="contained" style={{float: 'right'}} onClick={this.onClickContactList}>Contact List</Button>
+                <form className = "ui form" style={{marginTop: 20}}>
                    <div className = "field"> 
                         <label>Name</label>
                         <input 
