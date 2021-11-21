@@ -23,7 +23,7 @@ class AddContact extends React.Component{
     }
 
     onClickContactList = ()=>{
-        this.props.history.push("/contact-list");
+        this.props.history.push("/");
        // <Link to="/contact-list"></Link>
 
     }

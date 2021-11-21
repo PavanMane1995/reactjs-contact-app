@@ -1,12 +1,12 @@
 import React from "react";
-import user from "../images/user.png";
+import user from "../images/user-icon.jpg";
 import { Button } from "@material-ui/core";
 
 const ContactDetails = (props) => {
     console.log(props);
     const {id, name, email} = props.location.state.contact;
    const onClickContactList =() =>{
-        props.history.push("/contact-list");
+        props.history.push("/");
     }
     return(
         <div className='main'  style={{marginTop: 50}}>

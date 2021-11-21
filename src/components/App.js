@@ -28,7 +28,7 @@ function App() {
       id:uuid(),
       ...e,
     }
-    const response = await api.post("/contacts", request);
+    const response = await api.post(`/contacts`, request);
     setContacts([...contacts, response.data]);
   }
 
@@ -74,7 +74,7 @@ function App() {
           addContactHandler = {addContactHandler}>
         </AddContact>}>
       </Route>
-      <Route exact path='/contact-list' render={(props) => 
+      <Route exact path='/' render={(props) => 
       <ContactList {...props} 
         contactL = {contacts} 
         getContactId = {deleteContactHandler}
